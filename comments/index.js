@@ -25,5 +25,5 @@ app.post("/posts/:id/comments", (req, res) => {
 });
 
 app.listen(4001, () => {
-  console.log("Server is running on 4000 port");
+  console.log("Server is running on 4001 port");
 });
