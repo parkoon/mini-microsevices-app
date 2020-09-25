@@ -9,6 +9,10 @@ app.use(cors());
 
 const posts = {};
 
+app.get("/posts", (req, res) => {
+  res.send(posts);
+});
+
 app.post("/events", (req, res) => {
   const { type, data } = req.body;
 
@@ -25,7 +29,7 @@ app.post("/events", (req, res) => {
 
     const post = posts[postId];
 
-    posts.comments.push({ id, content });
+    post.comments.push({ id, content });
   }
 
   console.log(posts);
